@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
-import Hero from './components/Hero'
+import Hero from '../components/Hero'
 
 
-export default function Home() {
+export default function About() {
   return (
     <main className="">
       <section>
@@ -11,21 +11,19 @@ export default function Home() {
         title={
             <h1 className="font-bold mb-8 text-gray-900 text-6xl dark:text-white">Ada <br /> Karenamu</h1>
         }
-        description={<>
-
-          Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
+        description={<>Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
         button={
           <>
-            <Link href="/About" className="mb-20 flex justify-center rounded-full border border-gray-900 bg-white text-gray-900 p-4 dark:bg-gray-900 dark:text-white dark:border dark:border-white">Kenalan, yuk!</Link>
+            <Link href="/About" className="mb-20 flex justify-center rounded-full bg-white text-gray-900 p-4 dark:bg-gray-900 dark:text-white"> </Link>
           </>
         }
-        imageUrl="/hero.png"
+        imageUrl="/heroAbout.png"
         imageWidth={500}
         imageHeight={500}
       />
       </section>
 
-      <section className='bg-gray-50 dark:bg-white  min-h-screen'>
+      <section className='bg-gray-900 dark:bg-white  min-h-screen'>
         <div>
 
         </div>
@@ -37,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='bg-gray-50 dark:bg-white min-h-screen'>
+      <section className='bg-gray-900 dark:bg-white min-h-screen'>
         <div>
 
         </div>
