@@ -9,9 +9,9 @@ export default function About() {
       <section>
       <Hero
         title={
-            <h1 className="font-bold mb-8 text-gray-900 text-6xl dark:text-white">Ada <br /> Karenamu</h1>
+            <h1 className="font-bold mb-8 text-gray-900 text-6xl dark:text-white">Tentang <br /> BE digital</h1>
         }
-        description={<>Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
+        description={<> Kami adalah bank yang lahir seutuhnya dalam dunia digital.</>}
         button={
           <>
             <Link href="/About" className="mb-20 flex justify-center rounded-full bg-white text-gray-900 p-4 dark:bg-gray-900 dark:text-white"> </Link>

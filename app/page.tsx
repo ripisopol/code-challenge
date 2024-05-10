@@ -1,47 +1,46 @@
 import Image from "next/image";
 import Link from 'next/link'
 import Hero from './components/Hero'
+import Services from './Services'
+import CustomerReview from './CustomerReview'
 
 
 export default function Home() {
   return (
     <main className="">
       <section>
-      <Hero
-        title={
-            <h1 className="font-bold mb-8 text-gray-900 text-6xl dark:text-white">Ada <br /> Karenamu</h1>
-        }
-        description={<>
+        <Hero
+          title={
+            <h1 className="font-bold mb-8 text-cyan-600 text-6xl dark:text-white">Ada <br /> Karenamu</h1>
+          }
+          description={<>
 
-          Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
-        button={
-          <>
-            <Link href="/About" className="mb-20 flex justify-center rounded-full border border-gray-900 bg-white text-gray-900 p-4 dark:bg-gray-900 dark:text-white dark:border dark:border-white">Kenalan, yuk!</Link>
-          </>
-        }
-        imageUrl="/hero.png"
-        imageWidth={500}
-        imageHeight={500}
-      />
+            Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
+          button={
+            <>
+              <Link href="/about" className="mb-20 flex justify-center rounded-full border border-cyan-600 bg-white text-cyan-600 p-4 dark:bg-gray-900 dark:text-white dark:border dark:border-white">Kenalan, yuk!</Link>
+            </>
+          }
+          imageUrl="/hero.png"
+          imageWidth={500}
+          imageHeight={500}
+        />
       </section>
 
-      <section className='bg-gray-50 dark:bg-white  min-h-screen'>
+      <section className='bg-cyan-50 dark:bg-gray-900  min-h-screen'>
         <div>
 
         </div>
       </section>
 
-      <section className='bg-white dark:bg-gray-900  min-h-screen'>
-        <div>
-
-        </div>
+      <Services />
+      <section className="bg-white">
       </section>
 
-      <section className='bg-gray-50 dark:bg-white min-h-screen'>
-        <div>
 
-        </div>
-      </section>
+
+
+
 
     </main>
   );

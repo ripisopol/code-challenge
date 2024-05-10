@@ -3,12 +3,17 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: #fff;
-  --background-color: #f8f9fa;
-
+  --primary-color-light: #3498db;
+  --background-color-light: #f8f9fa;
+  --text-color-light: #333;
+  
+  --primary-color-dark: #ffffff;
+  --background-color-dark: #000000;
+  --text-color-dark: #fff;
 }
 
 body {
-
+  color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
