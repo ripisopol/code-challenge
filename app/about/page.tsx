@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link'
-import Hero from '../components/Hero'
+import Hero from '../../components/Hero'
 import Services from '../Services'
 import CustomerReview from '../CustomerReview'
 
@@ -11,7 +11,7 @@ export default function About() {
       <section>
         <Hero
           title={<> Tentang <br /> BE digital </>}
-          description="Kami adalah bank yang lahir seutuhnya dalam dunia digital."
+          description="Kami adalah bank yang lahir seutuhnya dalam dunia fantasi."
           imageUrl="/heroAbout.webp"
           imageWidth={700}
           imageHeight={700}

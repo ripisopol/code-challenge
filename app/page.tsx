@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from 'next/link'
-import Hero from './components/Hero'
+import Hero from '../components/Hero'
 import Services from './Services'
-import CustomerReview from './CustomerReview'
+import TataKelolaPerusahaan from './TataKelolaPerusahaan'
 
 
 export default function Home() {
@@ -11,22 +11,22 @@ export default function Home() {
       <section>
         <Hero
           title={<> Ada <br /> Karenamu </>}
-          description={<>Lahir digital. <br /> Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. <br /> Kami hadir buat kamu. Kami ya kamu.</>}
+          description="Lahir digital. Bank yang selalu ada tanpa jarak. Semudah itu, senyaman itu. Kami hadir buat kamu. Kami ya kamu. Iya.. kamu.."
           button="Kenalan, yuk!"
           imageUrl="/hero.webp"
           imageWidth={700}
           imageHeight={700}
         />
       </section>
-
-      <section className='bg-cyan-50 dark:bg-gray-900  min-h-screen'>
+<TataKelolaPerusahaan/>
+      {/* <section className='bg-pink-50  min-h-screen'>
         <div>
 
         </div>
-      </section>
+      </section> */}
 
       <Services />
-      <section className="bg-cyan-50 min-h-screen">
+      <section className="bg-pink-50 min-h-screen">
         <div>
 sad
         </div>

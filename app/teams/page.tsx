@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link'
-import Hero from '../components/Hero'
+import Hero from '../../components/Hero'
 import Services from '../Services'
 import CustomerReview from '../CustomerReview'
 

@@ -1,21 +1,23 @@
 import React from 'react'
-import Image from'next/image';
+import Image from 'next/image';
 import Link from 'next/link'
 
 const Services = () => {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-          <Image src="/app.webp" width={200} height={200} alt="" className="border border-cyan-100 bg-cyan-200 p-4 rounded-full flex justify-center items-center mx-auto" />
-          <h1 className="mb-4 py-4 text-4xl font-extrabold tracking-tight leading-none text-cyan-900 md:text-5xl lg:text-6xl dark:text-white">blu by BE digital</h1>
-          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-cyan-400">Aplikasi mobile bank digital yang bisa ini itu, dan menyatu dengan hidupmu.</p>
+    <section className="md:py-20 bg-pink-50">
+      <div className="py-8 px-4 mx-auto max-w-screen text-center lg:py-16">
+        <div className="bg-pink-50 shadow-lg md:shadow-none rounded-lg p-6 md:p-8 mx-auto ">
+          <Image src="/app.webp" width={150} height={150} alt="" className="bg-pink-500 p-2 rounded-2xl flex justify-center items-center mx-auto" />
+          <h1 className="mb-4 py-4 text-4xl font-extrabold tracking-tight leading-none text-pink-600 md:text-5xl lg:text-6xl">kirby by BE digital</h1>
+          <p className="mb-8 text-lg font-normal text-black lg:text-xl">Aplikasi mobile bank digital yang bisa una inu, dan menyatu dengan hidupmu.</p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <Link href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-full bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            <Link href="#" className="inline-flex justify-center items-center py-4 px-6 text-base font-medium text-center text-white rounded-full bg-pink-500 hover:underline">
               Selengkapnya
             </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   )
 }
 
