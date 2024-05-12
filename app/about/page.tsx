@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from 'next/link'
-import Hero from '../../components/Hero'
-import Services from '../Services'
-import CustomerReview from '../CustomerReview'
-
+import Hero from '../components/Hero'
+import VisiMisi from './VisiMisi'
+import ReadMore from './ReadMore'
+import Milestone from "./Milestone";
 
 export default function About() {
   return (
@@ -18,19 +16,9 @@ export default function About() {
         />
       </section>
 
-      <section className='bg-cyan-50   min-h-screen'>
-        <div>
-
-        </div>
-      </section>
-
-      <Services />
-      <section className="bg-cyan-50 min-h-screen">
-        <div>
-sad
-        </div>
-      </section>
-
+      <ReadMore />
+        <VisiMisi/>
+      <Milestone />
 
 
 

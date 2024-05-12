@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from 'next/link'
-import Hero from '../components/Hero'
+import Hero from './components/Hero'
 import Services from './Services'
-import TataKelolaPerusahaan from './TataKelolaPerusahaan'
+import Overview from './Overview'
+import Testimonial from './Testimonial'
 
 
 export default function Home() {
@@ -18,25 +17,9 @@ export default function Home() {
           imageHeight={700}
         />
       </section>
-<TataKelolaPerusahaan/>
-      {/* <section className='bg-pink-50  min-h-screen'>
-        <div>
-
-        </div>
-      </section> */}
-
+      <Overview />
       <Services />
-      <section className="bg-pink-50 min-h-screen">
-        <div>
-sad
-        </div>
-      </section>
-
-
-
-
-
-
+      <Testimonial />
     </main>
   );
 }

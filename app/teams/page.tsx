@@ -1,11 +1,17 @@
 import Image from "next/image";
-import Link from 'next/link'
-import Hero from '../../components/Hero'
+import Pimpinan from './Pimpinan';
+import Hero from '../components/Hero'
 import Services from '../Services'
-import CustomerReview from '../CustomerReview'
+import ImageSwitcher from './ImageSwitcher'
 
 
 export default function Teams() {
+  const images = [
+    '/struktur1.webp',
+    '/struktur2.webp',
+    '/struktur3.webp',
+    '/struktur4.webp',
+  ];
   return (
     <main className="">
       <section>
@@ -17,12 +23,10 @@ export default function Teams() {
           imageHeight={700}
         />
       </section>
-
-      <section className='bg-cyan-50 dark:bg-gray-900  min-h-screen'>
-        <div>
-
-        </div>
-      </section>
+      <div className="container mx-auto py-8">
+      <ImageSwitcher images={images} />
+    </div>
+     <Pimpinan/>
 
       <Services />
       <section className="bg-cyan-50 min-h-screen">

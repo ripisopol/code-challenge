@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
+import FadeUpOnScroll from "./components/FadeUpOnScroll";
 
 const Services = () => {
   return (
-    <section className="md:py-20 bg-pink-50">
+    <section className="md:py-10 bg-pink-50">
+      <FadeUpOnScroll>
       <div className="py-8 px-4 mx-auto max-w-screen text-center lg:py-16">
         <div className="bg-pink-50 shadow-lg md:shadow-none rounded-lg p-6 md:p-8 mx-auto ">
           <Image src="/app.webp" width={150} height={150} alt="" className="bg-pink-500 p-2 rounded-2xl flex justify-center items-center mx-auto" />
@@ -17,6 +19,8 @@ const Services = () => {
           </div>
         </div>
       </div>
+      </FadeUpOnScroll>
+      
     </section>
   )
 }
