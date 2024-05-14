@@ -1,6 +1,9 @@
+"use client"
 import Hero from '../../components/Hero'
 import dynamic from 'next/dynamic';
 import CardsContainer from './components/CardsContainer';
+import CardSlider from './components/CardSlider';
+import FAQ from './components/FAQ';
 
 // const Services = dynamic(() => import('./components/Services'), {
 //   loading: () => <p>Loading...</p>, 
@@ -26,7 +29,12 @@ export default function Services() {
           imageHeight={444}
         />
       </header>
-      <CardsContainer/>
+      <CardsContainer />
+      <div className="container mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-8">Emang ada fitur apa aja di blu?</h1>
+        <CardSlider />
+      </div>
+      <FAQ />
     </main>
   );
 }

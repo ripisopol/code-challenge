@@ -26,7 +26,7 @@ const CardsContainer: React.FC = () => {
   return (
     <FadeUpOnScroll>
 
-    <div className="flex justify-center my-10 md:my-40">
+    <div className="flex justify-center my-10 md:my-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:p-0 p-4">
         
         <Card
