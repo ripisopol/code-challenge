@@ -1,7 +1,16 @@
-import Hero from '../components/Hero'
-import VisiMisi from './VisiMisi'
-import ReadMore from './ReadMore'
-import Milestone from "./Milestone";
+import Hero from '../../components/Hero'
+import dynamic from 'next/dynamic';
+
+const VisiMisi = dynamic(() => import('./components/VisiMisi'), {
+  loading: () => <p>Loading...</p>, 
+});
+const ReadMore = dynamic(() => import('./components/ReadMore'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+const Milestone = dynamic(() => import('./components/Milestone'), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function About() {
   return (
@@ -11,13 +20,13 @@ export default function About() {
           title={<> Tentang <br /> BE digital </>}
           description="Kami adalah bank yang lahir seutuhnya dalam dunia fantasi."
           imageUrl="/heroAbout.webp"
-          imageWidth={700}
-          imageHeight={700}
+          imageWidth={500}
+          imageHeight={500}
         />
       </section>
 
       <ReadMore />
-        <VisiMisi/>
+      <VisiMisi />
       <Milestone />
 
 

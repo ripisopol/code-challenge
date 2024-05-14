@@ -1,8 +1,18 @@
-import Image from "next/image";
-import Pimpinan from './Pimpinan';
-import Hero from '../components/Hero'
-import Services from '../Services'
-import ImageSwitcher from './ImageSwitcher'
+
+import Hero from '@/components/Hero';
+import dynamic from 'next/dynamic';
+
+const Struktur = dynamic(() => import('./components/Struktur'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+const Team = dynamic(() => import('./components/Team'), {
+  loading: () => <p>Loading...</p>,
+});
+const Pimpinan = dynamic(() => import('./components/Pimpinan'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 
 export default function Teams() {
@@ -19,27 +29,15 @@ export default function Teams() {
           title={<> Kenal <br /> lebih dekat </>}
           description={<>Mengungkap Kekuatan Kolaboratif<br />yang Mendorong Keberhasilan dan Inovasi.</>}
           imageUrl="/heroTeams.webp"
-          imageWidth={700}
-          imageHeight={700}
+          imageWidth={500}
+          imageHeight={500}
         />
       </section>
-      <div className="container mx-auto py-8">
-      <ImageSwitcher images={images} />
-    </div>
-     <Pimpinan/>
-
-      <Services />
-      <section className="bg-cyan-50 min-h-screen">
-        <div>
-sad
-        </div>
-      </section>
-
-
-
-
-
-
+        <section className="container mx-auto py-8">
+          <Struktur images={images} />
+        </section>
+        <Team/>
+        <Pimpinan />
     </main>
   );
 }

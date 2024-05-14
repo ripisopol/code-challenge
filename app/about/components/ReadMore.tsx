@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import FadeUpOnScroll from '../../../components/FadeUpOnScroll'
+
 
 const ReadMore = () => {
   const [expanded, setExpanded] = useState(false);
@@ -9,8 +11,9 @@ const ReadMore = () => {
   };
 
   return (
-    <div className="text-justify">
-      <div className="text-gray-900 bg-white body-font p-8 md:p-24 md:text-2xl tracking-wider leading-loose">
+    <section className="text-justify">
+<FadeUpOnScroll>
+<div className="text-gray-900 bg-white body-font p-8 md:p-24 md:text-2xl tracking-wider leading-loose">
         <div className="text-start mb-10">
           <span className="md:hidden inline-block w-20 h-1 rounded-full bg-pink-600" />
         </div>
@@ -48,7 +51,9 @@ const ReadMore = () => {
           </button>
         )}
       </div>
-    </div>
+</FadeUpOnScroll>
+      
+    </section>
   );
 };
 
