@@ -26,16 +26,16 @@ const ReadMore = () => {
           {expanded && (
             <>
               <p className="my-4">
-                Layaknya teman, BCA Digital ingin tumbuh bersama dengan para nasabah. Kami ada untuk menyebarkan good vibes dan memberikan semangat dalam memulai langkahmu mewujudkan mimpi jadi kenyataan.
+                Layaknya teman, BE Digital ingin tumbuh bersama dengan para nasabah. Kami ada untuk menyebarkan good vibes dan memberikan semangat dalam memulai langkahmu mewujudkan mimpi jadi kenyataan.
               </p>
               <p className="mb-4">
-                Katanya tak kenal maka tak sayang. Biar lebih akrab, berikut sekilas sejarah tentang kami. Sebelumnya PT Bank Digital BCA (BCA Digital) itu adalah PT Bank Royal Indonesia (Royal Bank) yang diakuisisi oleh PT Bank Central Asia Tbk (BCA) pada akhir tahun 2019. Dengan identitas baru ini, BCA Digital berkomitmen untuk terus meracik ide baru untuk inovasi layanan dan produk perbankan yang selalu bikin kamu berkata, &quot;untung ada BCA Digital!&quot;
+                Katanya tak kenal maka tak sayang. Biar lebih akrab, berikut sekilas sejarah tentang kami. Sebelumnya PT Bank Digital BE (BE Digital) itu adalah PT Bank Royal Indonesia (Royal Bank) yang diakuisisi oleh PT Bank Emok Tbk (BE) pada akhir tahun 2019. Dengan identitas baru ini, BE Digital berkomitmen untuk terus meracik ide baru untuk inovasi layanan dan produk perbankan yang selalu bikin kamu berkata, &quot;untung ada BE Digital!&quot;
               </p>
               <p className="mb-4">
-                Dan tanpa melupakan hal terpenting, BCA Digital akan selalu meninggalkan dampak positif dalam setiap jejak langkah kami demi menciptakan dunia yang sustain dan lebih baik.
+                Dan tanpa melupakan hal terpenting, BE Digital akan selalu meninggalkan dampak positif dalam setiap jejak langkah kami demi menciptakan dunia yang sustain dan lebih baik.
               </p>
               <p className="mb-4">
-                Sesuai Surat Keputusan Deputi Komisioner Pengawas Perbankan I Otoritas Jasa Keuangan Nomor KEP-92/PB.1/2020 tertanggal 19 Mei 2020 Tentang Penetapan Penggunaan Izin Usaha Atas Nama PT Bank Royal Indonesia menjadi Izin Usaha Atas Nama PT Bank Digital BCA
+                Sesuai Surat Keputusan Deputi Komisioner Pengawas Perbankan I Otoritas Jasa Keuangan Nomor KEP-92/PB.1/2020 tertanggal 19 Mei 2020 Tentang Penetapan Penggunaan Izin Usaha Atas Nama PT Bank Royal Indonesia menjadi Izin Usaha Atas Nama PT Bank Digital BE
               </p>
             </>
           )}
