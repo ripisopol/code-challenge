@@ -4,7 +4,7 @@ import FadeUpOnScroll from '../../../components/FadeUpOnScroll'
 
 const VisiMisi: React.FC = () => {
   return (
-    <section className=" bg-pink-50 mx-auto md:p-24 p-8">
+    <section className=" bg-pink-50 mx-auto md:p-24">
       <FadeUpOnScroll>
       <div className="bg-pink-600 container rounded-lg shadow-lg overflow-hidden md:flex md:flex-row md:items-center justify-center md:space-x-6 md:space-y-0 max-w-full mx-auto p-4 md:p-14">
         <div className="p-6 md:w-1/2 md:order-2 text-start text-white">
@@ -16,7 +16,7 @@ const VisiMisi: React.FC = () => {
 
         </div>
         <div className="md:w-1/2 md:relative md:order-1 items-center">
-          <Image className="w-3xl h-3xl object-cover" src="/bg-visi.webp" alt="" width={400} height={400 } />
+          <Image className="w-5xl h-5xl  object-cover" src="/bg-visi.webp" alt="" width={400} height={400 } />
         </div>
       </div>
       </FadeUpOnScroll>

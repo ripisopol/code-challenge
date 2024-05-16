@@ -26,7 +26,7 @@ const CardsContainer: React.FC = () => {
   return (
     <FadeUpOnScroll>
 
-    <div className="flex justify-center my-10 md:my-20">
+    <section className="flex justify-center my-10 md:my-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:p-0 p-4">
         
         <Card
@@ -42,7 +42,7 @@ const CardsContainer: React.FC = () => {
           description="Kamu butuh bantuan soal blu? Tenang, ada tim haloblu yang selalu sigap bantu kamu!"
         />
       </div>
-    </div>
+    </section>
     </FadeUpOnScroll>
 
   );

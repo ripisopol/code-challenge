@@ -1,5 +1,9 @@
-"use client"
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
+import Image from 'next/image'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import FadeUpOnScroll from "@/components/FadeUpOnScroll";
 
 interface CardProps {
   title: string;
@@ -8,124 +12,189 @@ interface CardProps {
   color: string;
 }
 
+interface ArrowProps {
+  onClick?: () => void;
+  className?: string;
+}
+
+const NextArrow: React.FC<ArrowProps> = ({ onClick, className }) => (
+  <div
+    className={`custom-arrow next ${className}`}
+    onClick={onClick}
+    role="button"
+    tabIndex={0}
+  >
+    →
+  </div>
+);
+
+const PrevArrow: React.FC<ArrowProps> = ({ onClick, className }) => (
+  <div
+    className={`custom-arrow prev bg-black ${className}`}
+    onClick={onClick}
+    role="button"
+    tabIndex={0}
+  >
+    ←
+  </div>
+);
+
 const Card: React.FC<CardProps> = ({ title, description, image, color }) => (
-  <div className={`p-6 rounded-lg shadow-md ${color} mx-2`} style={{ height: '400px' }}>
-    <h2 className="text-xl font-bold mb-4">{title}</h2>
-    <p className="text-gray-100">{description}</p>
-    <img src={image} alt={title} className="mt-4" />
+  <div className={`p-6 border rounded-lg shadow-md ${color} mx-2 flex flex-col justify-between`} style={{ height: '260px' }}>
+    <div>
+      <h2 className="md:text-xl font-bold mb-4">{title}</h2>
+      <p className="text-xs md:text-md">{description}</p>
+    </div>
+    <div className="flex justify-center h-auto w-auto mt-12">
+      <Image src={image} alt={title} width={250} height={250} />
+    </div>
   </div>
 );
 
 const CardSlider: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(1);
-  const sliderRef = useRef<HTMLDivElement>(null);
-
   const cards: CardProps[] = [
-    {
-      title: 'bluAccount',
-      description: 'Buka rekening semudah itu!',
-      image: '/bluAccount.png',
-      color: 'bg-blue-500 text-white',
-    },
-    {
-      title: 'bluSaving',
-      description: 'Nabung sekaligus buat pos keluargan. Suku bunga 3% p.a.',
-      image: '/bluSaving.png',
-      color: 'bg-purple-500 text-white',
-    },
-    {
-      title: 'bluGether',
-      description: 'Patungan online bareng teman dengan suku bunga tabungan 3% p.a.',
-      image: '/bluGether.png',
-      color: 'bg-orange-500 text-white',
-    },
-    {
-      title: 'bluDeposit',
-      description: 'Mulai nabung jangka panjang dengan suku bunga hingga 4%',
-      image: '/bluDeposit.png',
-      color: 'bg-green-500 text-white',
-    },
-    {
-      title: 'bluInvest',
-      description: 'Satu aplikasi untuk investasi dan nabung.',
-      image: '/bluInvest.png',
-      color: 'bg-indigo-500 text-white',
-    },
+        {
+          title: 'kirbyAccount',
+          description: 'Buka rekening semudah itu!',
+          image: '/kirbyAccount.png',
+          color: 'bg-blue-500 text-white ',
+        },
+        {
+          title: 'kirbySaving',
+          description: 'Nabung sekaligus buat pos keluargan. Suku bunga 3% p.a.',
+          image: '/kirbySaving.png',
+          color: 'bg-purple-500 text-white',
+        },
+        {
+          title: 'kirbyGether',
+          description: 'Patungan online bareng teman dengan suku bunga tabungan 3% p.a.',
+          image: '/kirbyGether.png',
+          color: 'bg-orange-500 text-white',
+        },
+        {
+          title: 'kirbyDeposit',
+          description: 'Mulai nabung jangka panjang dengan suku bunga hingga 4%',
+          image: '/kirbyDeposit.png',
+          color: 'bg-green-500 text-white',
+        },
+        {
+          title: 'kirbyVirtual Card',
+          description: 'Satu kartu virtual untuk berbagai kebutuhan ✨',
+          image: '/kirbyVirtualCard.png',
+          color: 'bg-indigo-500 text-white',
+        },
+        {
+          title: 'kirbyBisnis',
+          description: 'Rekening bisnis untuk sobatkirby yang punya usaha',
+          image: '/kirbyBisnis.png',
+          color: 'bg-blue-500 text-white',
+        },
+        {
+          title: 'kirbyInvest',
+          description: 'Mulai investasimu, bareng kirby!',
+          image: '/kirbyInvest.png',
+          color: 'bg-blue-500 text-white',
+        },
+        {
+          title: 'kirbyExtraCash',
+          description: 'Dapatkan pinjaman hingga Rp 10 juta',
+          image: '/kirbyExtraCash.png',
+          color: 'bg-pink-900 text-white',
+        },
+        {
+          title: 'kirbyInsurance',
+          description: 'Instant everything. Incredible prices. Big heart.',
+          image: '/kirbyInsurance.png',
+          color: 'bg-cyan-500 text-white',
+        },
+        {
+          title: 'Bayar/Beli',
+          description: 'Berbagai transaksi cukup lewat satu aplikasi',
+          image: '/bayarBeli.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'QRIS',
+          description: 'Bayar ini itu tinggal scan! Fitur buat sobat cashless dan cardless',
+          image: '/QRIS.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'Tarik Tunai Tanpa Kartu',
+          description: 'Tarik tunai aman pakai kode transaksi',
+          image: '/tarikTunai.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'Top Up E-Money',
+          description: 'Apapun E-Money nya, Top Up bisa pakai kirby',
+          image: '/topUp.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'Transfer',
+          description: 'Transfer pakai kirby, siap-siap pesta kirbyRewards',
+          image: '/transfer.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'Riwayat Transaksi',
+          description: 'Cek setiap detail transaksi kamu di aplikasi blu',
+          image: '/riwayatTransaksi.png',
+          color: 'bg-white text-black',
+        },
+        {
+          title: 'Tracker',
+          description: 'Pantau cashflow kamu setiap bulannya',
+          image: '/tracker.png',
+          color: 'bg-white text-black',
+        },
+      
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (sliderRef.current) {
-        const cardWidth = 256 + 16; // Fixed card width + margin
-        setVisibleCards(Math.floor(sliderRef.current.clientWidth / cardWidth));
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, cards.length - visibleCards));
+  const settings = {
+    nextArrow: <NextArrow className="bg-black"/>,
+    arrows: true,
+    infinite: false,
+    slidesToShow: 4.5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4.5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3.5,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="relative w-full overflow-hidden" ref={sliderRef}>
-      <div
-        className="flex transition-transform duration-500"
-        style={{ transform: `translateX(-${(100 / visibleCards) * currentSlide}%)` }}
-      >
-        {cards.map((card, index) => (
-          <div key={index} className="flex-shrink-0" style={{ width: '272px' }}>
+    <Slider {...settings}>
+      {cards.map((card, index) => (
+        <div key={index}>
+          <FadeUpOnScroll>
             <Card
               title={card.title}
               description={card.description}
               image={card.image}
               color={card.color}
             />
-          </div>
-        ))}
-      </div>
-      {currentSlide > 0 && (
-        <button
-          onClick={handlePrevSlide}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-        >
-          <svg
-            className="w-6 h-6 text-gray-700"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-      )}
-      {currentSlide < cards.length - visibleCards && (
-        <button
-          onClick={handleNextSlide}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-        >
-          <svg
-            className="w-6 h-6 text-gray-700"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      )}
-    </div>
+          </FadeUpOnScroll>
+        </div>
+      ))}
+    </Slider>
   );
 };
 

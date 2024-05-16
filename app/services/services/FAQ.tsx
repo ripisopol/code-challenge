@@ -12,27 +12,29 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="border-b border-gray-200">
+    <div className="border-b border-gray-200">
       <FadeUpOnScroll>
-        <button
-          className="w-full text-left p-4 flex justify-between items-center"
-          onClick={() => setIsOpen(!isOpen)}
+        
+      <button
+        className="w-full text-left p-4 flex justify-between items-center"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="text-lg font-medium text-gray-900">{question}</span>
+        <svg
+          className={`w-5 h-5 text-gray-500 transition-transform transform ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <span className="text-lg font-medium text-gray-900">{question}</span>
-          <svg
-            className={`w-5 h-5 text-gray-500 transition-transform transform ${isOpen ? 'rotate-180' : ''
-              }`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        {isOpen && <div className="p-4 text-gray-600">{answer}</div>}
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      {isOpen && <div className="p-4 text-gray-600">{answer}</div>}
       </FadeUpOnScroll>
-    </section>
+    </div>
   );
 };
 

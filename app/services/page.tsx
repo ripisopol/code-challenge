@@ -1,20 +1,18 @@
 "use client"
 import Hero from '../../components/Hero'
 import dynamic from 'next/dynamic';
-import CardsContainer from './components/CardsContainer';
-import CardSlider from './components/CardSlider';
-import FAQ from './components/FAQ';
 
-// const Services = dynamic(() => import('./components/Services'), {
-//   loading: () => <p>Loading...</p>, 
-// });
-// const Overview = dynamic(() => import('./components/Overview'), {
-//   loading: () => <p>Loading...</p>,
-// });
-// const Testimonial = dynamic(() => import('./components/Testimonial'), {
-//   loading: () => <p>Loading...</p>, // Placeholder content or loading indicator
-//   ssr: false, // Disable server-side rendering for client-only components
-// });
+
+const CardsContainer = dynamic(() => import('./components/CardsContainer'), {
+  loading: () => <p>Loading...</p>, 
+});
+const CardSlider = dynamic(() => import('./components/CardSlider'), {
+  loading: () => <p>Loading...</p>,
+});
+const FAQ = dynamic(() => import('./components/FAQ'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 export default function Services() {
   return (
@@ -30,10 +28,10 @@ export default function Services() {
         />
       </header>
       <CardsContainer />
-      <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-8">Emang ada fitur apa aja di blu?</h1>
+      <section className="container mx-auto py-8">
+        <h1 className="text-3xl font-bold pl-2 text-center md:text-start mb-8">Emang ada fitur apa aja di kirby?</h1>
         <CardSlider />
-      </div>
+      </section>
       <FAQ />
     </main>
   );
