@@ -39,15 +39,15 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQ: React.FC = () => {
   const faqItems = [
     {
-      question: 'Apa saja dokumen yang perlu disiapkan untuk membuka rekening blu?',
-      answer: 'Gak ribet, kamu cuma perlu siapin:\n\n- E-KTP\n- NPWP (opsional)\n\nPastikan kamu ada di ruangan terang karena tim haloblu akan melakukan video call untuk verifikasi datamu, ya.',
+      question: 'Apa saja dokumen yang perlu disiapkan untuk membuka rekening kirby?',
+      answer: 'Gak ribet, kamu cuma perlu siapin:\n\n- E-KTP\n- NPWP (opsional)\n\nPastikan kamu ada di ruangan terang karena tim halokirby akan melakukan video call untuk verifikasi datamu, ya.',
     },
     {
-      question: 'Apakah saya bisa membuatkan rekening blu untuk orang lain?',
+      question: 'Apakah saya bisa membuatkan rekening kirby untuk orang lain?',
       answer: 'Sayangnya, tidak. Kamu tidak bisa membuat akun perwakilan untuk anak atau orang lain yang masih belum memiliki E-KTP. Tiap Nomor Induk Kependudukan (NIK) hanya bisa digunakan untuk satu akun.',
     },
     {
-      question: 'Saya belum punya NPWP, apakah bisa punya rekening blu?',
+      question: 'Saya belum punya NPWP, apakah bisa punya rekening kirby?',
       answer: 'Bisa. Kamu akan diminta untuk upload NPWP jika nominal portofolio yang dimiliki sudah mencapai Rp 7,5 juta.',
     },
   ];
