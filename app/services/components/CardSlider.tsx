@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import FadeUpOnScroll from "@/components/FadeUpOnScroll";
 
 interface CardProps {
   title: string;
@@ -155,26 +154,30 @@ const CardSlider: React.FC = () => {
   const settings = {
     nextArrow: <NextArrow className="bg-black"/>,
     arrows: true,
-    infinite: false,
-    slidesToShow: 4.5,
+    infinite: true,
+    slidesToShow: 5,
     slidesToScroll: 1,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4.5,
+          slidesToShow: 5,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3.5,
+          slidesToShow: 4,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 2,
         },
       },
     ],
@@ -184,14 +187,12 @@ const CardSlider: React.FC = () => {
     <Slider {...settings}>
       {cards.map((card, index) => (
         <div key={index}>
-          <FadeUpOnScroll>
             <Card
               title={card.title}
               description={card.description}
               image={card.image}
               color={card.color}
             />
-          </FadeUpOnScroll>
         </div>
       ))}
     </Slider>
