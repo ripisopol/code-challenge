@@ -158,7 +158,7 @@ const CardSlider: React.FC = () => {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    speed: 2000,
+    speed: 1000,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
