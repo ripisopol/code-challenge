@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface FadeUpOnScrollProps {
   children: React.ReactNode;
-  thresholds?: number[]; // Thresholds for each item
+  thresholds?: number[];
 }
 
 const FadeUpOnScroll = ({ children, thresholds = [] }: FadeUpOnScrollProps) => {
@@ -13,7 +13,7 @@ const FadeUpOnScroll = ({ children, thresholds = [] }: FadeUpOnScrollProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollTop(window.pageYOffset || document.documentElement.scrollTop);
+      setScrollTop(window.scrollY || document.documentElement.scrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +21,7 @@ const FadeUpOnScroll = ({ children, thresholds = [] }: FadeUpOnScrollProps) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array to ensure this effect runs only once
+  }, []);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -31,18 +31,17 @@ const FadeUpOnScroll = ({ children, thresholds = [] }: FadeUpOnScrollProps) => {
       if (element) {
         const observer = new IntersectionObserver(
           (entries) => {
-            // biome-ignore lint/complexity/noForEach: <explanation>
             entries.forEach((entry) => {
               if (entry.isIntersecting && !visibleIndexes.includes(index)) {
                 setTimeout(() => {
                   setVisibleIndexes((prevIndexes) => [...prevIndexes, index]);
-                }, 100 * (index + 1)); // Adjust delay as needed
+                }, 100 * (index + 1));
               } else if (!entry.isIntersecting && visibleIndexes.includes(index)) {
                 setVisibleIndexes((prevIndexes) => prevIndexes.filter((i) => i !== index));
               }
             });
           },
-          { threshold: thresholds[index] !== undefined ? thresholds[index] : 0.2 } // Use the provided threshold or default to 0.2
+          { threshold: thresholds[index] !== undefined ? thresholds[index] : 0.2 }
         );
         observer.observe(element);
         observers.push(observer);
@@ -50,10 +49,9 @@ const FadeUpOnScroll = ({ children, thresholds = [] }: FadeUpOnScrollProps) => {
     });
 
     return () => {
-      // biome-ignore lint/complexity/noForEach: <explanation>
       observers.forEach((observer) => observer.disconnect());
     };
-  }, [thresholds, visibleIndexes]); // Include thresholds and visibleIndexes as dependencies
+  }, [thresholds, visibleIndexes]);
 
   return (
     <div className="fade-up-on-scroll-container">

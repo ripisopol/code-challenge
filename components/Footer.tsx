@@ -82,9 +82,9 @@ const Footer: React.FC = () => {
         <div className="bg-pink-800  mt-auto">
           <div className="container mx-auto p-4">
             <div className="flex justify-between items-center">
-              <p className="text-white text-xs">Terima kasih sudah mampir! Laman ini lebih nyaman dinikmati di ponsel pintar. Coba sekarang untuk pengalaman yang lebih maksimal.
-
-</p>
+              <p className="text-white text-xs">
+                Terima kasih sudah mampir! Laman ini lebih nyaman dinikmati di ponsel pintar. Coba sekarang untuk pengalaman yang lebih maksimal.
+              </p>
             </div>
           </div>
         </div>

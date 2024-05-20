@@ -13,7 +13,7 @@ const Services = () => {
           <h1 className="mb-4 py-4 text-4xl font-extrabold tracking-tight leading-none text-pink-600 md:text-5xl lg:text-6xl">kirby by BE digital</h1>
           <p className="mb-8 text-lg font-normal text-black lg:text-xl">Aplikasi mobile bank digital yang bisa una inu, dan menyatu dengan hidupmu.</p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <Link href="#" className="inline-flex justify-center items-center py-4 px-6 text-base font-medium text-center text-white rounded-full bg-pink-600 hover:underline">
+            <Link href="/services" className="inline-flex justify-center items-center py-4 px-6 text-base font-medium text-center text-white rounded-full bg-pink-600 hover:underline">
               Selengkapnya
             </Link>
           </div>
