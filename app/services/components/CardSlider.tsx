@@ -160,7 +160,7 @@ const CardSlider: React.FC = () => {
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     cssEase: "linear",
     responsive: [
       {

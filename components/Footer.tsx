@@ -41,8 +41,8 @@ const Footer: React.FC = () => {
               <div className="container mx-auto p-4">
                 <div className="flex justify-between items-center">
                   <p className="text-white text-xs text-justify">
-                    BE Digital berizin dan diawasi oleh yang punya. <br />
-                    BE Digital merupakan peserta penjaminan BPKB.
+                    BE Digital berizin dan diawasi oleh yang Otoritas Jasa Keuangan dan Bank Negara Pasundan. <br />
+                    BE Digital merupakan peserta penjaminan LPS.
                   </p>
                   <nav className="inline-flex w-full justify-center md:justify-start md:w-auto gap-x-0 md:gap-x-4">
                     <Link href="https://pranx.com/maze/" className="text-white p-4 bg-pink-600 hover:bg-pink-700 rounded-full">
@@ -82,7 +82,9 @@ const Footer: React.FC = () => {
         <div className="bg-pink-800  mt-auto">
           <div className="container mx-auto p-4">
             <div className="flex justify-between items-center">
-              <p className="text-white text-xs">Mohon bersabar.. ini ujian.</p>
+              <p className="text-white text-xs">Terima kasih sudah mampir! Laman ini lebih nyaman dinikmati di ponsel pintar. Coba sekarang untuk pengalaman yang lebih maksimal.
+
+</p>
             </div>
           </div>
         </div>
@@ -90,7 +92,7 @@ const Footer: React.FC = () => {
         <div className="bg-gray-500  mt-auto">
           <div className="container mx-auto p-4">
             <div className="flex justify-between items-center">
-              <p className="text-white text-xs">&copy;Bank Emok - PT Mencari Cinta Sejati</p>
+              <p className="text-white text-xs">&copy;BE digital - 2024 </p>
             </div>
           </div>
         </div>

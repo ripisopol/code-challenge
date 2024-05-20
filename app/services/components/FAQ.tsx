@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto py-20 p-6">
       <h2 className="text-2xl font-bold mb-6">Hal yang paling sering ditanyakan?</h2>
       <div>
         {faqItems.map((item, index) => (
