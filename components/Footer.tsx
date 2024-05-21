@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         <div className="bg-gray-500  mt-auto">
           <div className="container mx-auto p-4">
             <div className="flex justify-between items-center">
-              <p className="text-white text-xs">&copy;BE digital - 2024 </p>
+              <p className="text-white text-xs">&copy;Bank Emok digital - 2024 </p>
             </div>
           </div>
         </div>

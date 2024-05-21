@@ -13,7 +13,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, description, button, imageUrl, imageWidth, imageHeight }) => {
     return (
-        <section className="min-h-full text-white bg-pink-600 body-font  pt-12">
+        <section className="min-h-full text-white bg-pink-600 body-font  pt-12 justify-around">
                 <div className="container mx-auto px-5 pt-12 md:flex md:flex-row md:items-center" >
                     <div className="md:w-1/2 md:pr-4">
                         <div className="flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
